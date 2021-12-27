@@ -1,0 +1,21 @@
+<div style="margin-bottom: 5em;"></div>
+<div class="jumbotron">
+  <h1 class="display-4" style="font-size: 4em;"><%= @userdetail.name %></h1>
+  <h6><%= @userdetail.email %></h6>
+  <p class="lead"><%= @userdetail.about %></p>
+  <hr class="my-4">
+  <p>Studied in <%= @userdetail.college %> and CGPA is <%= @userdetail.cgpa %>.</p>
+  <p>Currently staying in <%= @userdetail.address %> and contact number is <%= @userdetail.phone %>.</p>
+  <p>Age is <%= @userdetail.age %>(<%= @userdetail.gender %>).</p>
+  <p>Languages : <%= @userdetail.language %>.</p>
+  <p>Programming languages  : <%= @userdetail.programming_language %>.</p>
+  <p>Achievements : <%= @userdetail.achievement %></p>
+  <p>Projects : <%= @userdetail.project %></p>
+  <p>Desired position is <%= @userdetail.position %> and desired pay is Rs.<%= @userdetail.desired_pay %>.</p>
+
+  <%= link_to 'Update profile', edit_userdetail_path(@userdetail) ,class:"btn btn-primary btn-lg",role:"button" %>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= link_to 'Back', home_index_path ,class:"btn btn-primary btn-lg" ,role:"button" %>
+</div>
+
+
+
+

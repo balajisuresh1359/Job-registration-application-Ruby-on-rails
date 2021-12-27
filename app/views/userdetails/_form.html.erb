@@ -1,0 +1,114 @@
+<head>
+  <style>
+    div{
+      margin-bottom: 1.3em;
+    }
+  </style>
+</head>
+
+<div style="margin-bottom: 3em;">
+
+</div>
+<%= form_with(model: userdetail) do |form| %>
+  <% if userdetail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(userdetail.errors.count, "error") %> prohibited this userdetail from being saved:</h2>
+
+      <ul>
+        <% userdetail.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name ,class:"form-control" ,placeholder:"name" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email ,class:"form-control" ,placeholder:"email"%>
+  </div>
+
+ 
+
+  <div class="field form-group">
+    <%= form.label :age %>
+    <%= form.number_field :age ,class:"form-control" ,placeholder:"age"%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :gender %>
+    <%= form.text_field :gender ,class:"form-control" ,placeholder:"gender"%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :phone %>
+    <%= form.text_field :phone ,class:"form-control" ,placeholder:"phone"%>
+  </div>
+
+ <div class="field form-group">
+    <%= form.label :address %>
+    <%= form.text_area :address ,class:"form-control"  ,placeholder:"address" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :"Major area of study" %>
+    <%= form.text_field :gegree ,class:"form-control" ,placeholder:"major area of study"%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :college %>
+    <%= form.text_field :college ,class:"form-control" ,placeholder:"college name" %>
+  </div>
+
+ <div class="field form-group">
+    <%= form.label :cgpa %>
+    <%= form.text_field :cgpa ,class:"form-control" ,placeholder:"cgpa"%>
+  </div>
+
+  
+
+  <div class="field form-group">
+    <%= form.label :language %>
+    <%= form.text_field :language ,class:"form-control" ,placeholder:"languages"%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :programming_language %>
+    <%= form.text_field :programming_language ,class:"form-control",placeholder:"programming languages" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :project %>
+    <%= form.text_area :project ,class:"form-control"  ,placeholder:"project"%>
+  </div>
+
+
+  <div class="field form-group">
+    <%= form.label :about %>
+    <%= form.text_field :about ,class:"form-control" ,placeholder:"about"%>
+  </div>
+
+<div class="field form-group">
+    <%= form.label :position %>
+    <%= form.text_field :position ,class:"form-control" ,placeholder:"desired position"%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :desired_pay %>
+    <%= form.text_field :desired_pay ,class:"form-control" ,placeholder:"desired pay"%>
+  </div>
+
+
+  <div class="field form-group">
+    <%= form.label :achievement %>
+    <%= form.text_area :achievement ,class:"form-control" ,placeholder:"achievments" %>
+  </div>
+
+  <div class="actions" style="margin-top:2em">
+    <%= form.submit class:'btn btn-primary'%>
+  </div>
+<% end %>
